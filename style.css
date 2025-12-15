@@ -1,0 +1,15 @@
+.form-check-label img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tooltip-js {
+    position: absolute;
+    background: #b9b9b9;
+    color: #000;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 9999;
+}

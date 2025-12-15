@@ -39,7 +39,7 @@
                             value="vertical"
                             checked>
                         <label class="form-check-label" for="orient-vert">
-                            Вертикально
+                            <img src="img/vertrect.png" alt="Вертикально" width="20" height="40">Вертикально
                         </label>
                         <br>
                         <input class="form-check-input" 
@@ -48,7 +48,7 @@
                             id="orient-hor"
                             value="horizontal">
                         <label class="form-check-label" for="orient-hor">
-                            Горизонтально
+                            <img src="img/horrect.png" alt="Горизонтально" width="20" height="40">Горизонтально
                         </label>
                     </div>
 
@@ -102,8 +102,10 @@
                 <div class="col-md-4">
                     <label class="form-label">Пластикова обкладинка/підкладка</label>
                 </div>
-                <div class="col-md-1">
-                    <p>ⓘ</p>
+                <div class="col-md-1" id="tip1">
+                    <span class="tip" data-text="Обкладинка – це прозорий пластик, як правило
+застосовується зверху. Підкладка - паперова щільна палітурка, фактура під кожу. Як правило застосовується
+знизу">ⓘ</span>
                 </div>
                 <div class="col-md-4">
                     <select class="form-select">
@@ -121,27 +123,44 @@
                     <label class="form-label">Обкладинка</label>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select">
+                    <select class="form-select" id="obkladinkavibor">
                         <option value="no" selected>Без обкладинки</option>
-                        <option value="white">2 стор (1 аркуш)</option>
+                        <option value="yes">2 стор (1 аркуш)</option>
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select">
-                        <option value="kr130" selected>Крейдований 130гр</option>
-                        <option value="kr200">Крейдований 200гр</option>
-                        <option value="kr300">Крейдований 300гр</option>
-                        <option value="longside">Офсет 250 г/м2</option>
+                    <select class="form-select" id="obklmat" disabled>
+                        <option value="kr130" selected>Крейдований 130 гр</option>
+                        <option value="kr200">Крейдований 200 гр</option>
+                        <option value="kr300">Крейдований 300 гр</option>
+                        <option value="ofset160">Офсетний 160 гр</option>
+                        <option value="ofset300">Офсетний 300 гр</option>
+                        <option value="dalicandido">Dali candido 285 г/м</option>
+                        <option value="dalineve">Dali neve 285 г/м</option>
+                        <option value="stardreamcrystal">Stardream crystal 285 г/м</option>
+                        <option value="stardreamdiamond">Stardream diamond 285 г/м</option>
+                        <option value="stardreamopal">Stardream opal 285 г/м</option>
+                        <option value="stardreamcitrine">Stardream citrine 285 г/м</option>
+                        <option value="floraavorio">Flora avorio 350 г/м</option>
+                        <option value="tintorettogesso">Tintoretto gesso 300 г/м</option>
+                        <option value="siriopearlaurum">Sirio pearl aurum 300 г/м</option>
+                        <option value="icelite2s">Icelite 2s Toile moyenne 300-335 г/м</option>
+                        <option value="splendor">SplendorGel avorio 300 г/м</option>
+                        <option value="sirio">Sirio white white 350 г/м</option>
+                        <option value="gsk">GSK Калька EW 200 г/м</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="longside">Без покриття</option>
+                    <select class="form-select" id="obklpokr" disabled>
+                        <option value="no">Без покриття</option>
+                        <option value="gl">ГЛ 1+1 100 мікрон</option>
+                        <option value="mat">МАТ 1+1 100 мікрон</option>
+                        <option value="soft">SOFT лам 75 мікрон</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="longside">4+0 (R9100)</option>
+                    <select class="form-select" id="obkldruk" disabled>
+                        <option value="r9100">4+0 (R9100)</option>
                     </select>
                 </div>
             </div>
@@ -152,23 +171,44 @@
                     <label class="form-label">Підкладка</label>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select">
-                        <option value="white">2 стор (1 аркуш)</option>
+                    <select class="form-select" id="pidklvibor">
+                        <option value="no" selected>Без підкладки</option>
+                        <option value="yes">2 стор (1 аркуш)</option>
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select" disabled>
-                        <option value="longside">Офсет 250 г/м2</option>
+                    <select class="form-select" id="pidklmat" disabled>
+                        <option value="kr130" selected>Крейдований 130 гр</option>
+                        <option value="kr200">Крейдований 200 гр</option>
+                        <option value="kr300">Крейдований 300 гр</option>
+                        <option value="ofset160">Офсетний 160 гр</option>
+                        <option value="ofset300">Офсетний 300 гр</option>
+                        <option value="dalicandido">Dali candido 285 г/м</option>
+                        <option value="dalineve">Dali neve 285 г/м</option>
+                        <option value="stardreamcrystal">Stardream crystal 285 г/м</option>
+                        <option value="stardreamdiamond">Stardream diamond 285 г/м</option>
+                        <option value="stardreamopal">Stardream opal 285 г/м</option>
+                        <option value="stardreamcitrine">Stardream citrine 285 г/м</option>
+                        <option value="floraavorio">Flora avorio 350 г/м</option>
+                        <option value="tintorettogesso">Tintoretto gesso 300 г/м</option>
+                        <option value="siriopearlaurum">Sirio pearl aurum 300 г/м</option>
+                        <option value="icelite2s">Icelite 2s Toile moyenne 300-335 г/м</option>
+                        <option value="splendor">SplendorGel avorio 300 г/м</option>
+                        <option value="sirio">Sirio white white 350 г/м</option>
+                        <option value="gsk">GSK Калька EW 200 г/м</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="longside">Без покриття</option>
+                    <select class="form-select" id="pidklpokr" disabled>
+                        <option value="no">Без покриття</option>
+                        <option value="gl">ГЛ 1+1 100 мікрон</option>
+                        <option value="mat">МАТ 1+1 100 мікрон</option>
+                        <option value="soft">SOFT лам 75 мікрон</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="longside">4+0 (R9100)</option>
+                    <select class="form-select" id="pidkldruk" disabled>
+                        <option value="r9100">4+0 (R9100)</option>
                     </select>
                 </div>
             </div>
@@ -179,22 +219,30 @@
                     <label class="form-label">Внутрішній блок</label>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select">
-                        <option value="white">4 стор (2 аркуші)</option>
+                    <select class="form-select" id="vnutrarkush">
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select">
-                        <option value="longside">Крейд ГЛ 350 г/м2</option>
+                    <select class="form-select" id="vnutrmat">
+                        <option value="ofset80" selected>Офсетний 80 гр</option>
+                        <option value="ofset160">Офсетний 160 гр</option>
+                        <option value="kreid130">Крейдований 130 гр</option>
                     </select>
                 </div>
                 <div class="col-md-2">
                     <select class="form-select">
-                        <option value="longside">Без друку</option>
+                        <option value="r9100">4+0 (R9100)</option>
+                        <option value="r91001">4+4 (R9100)</option>
+                        <option value="plus0">1+0</option>
+                        <option value="plus1">1+1</option>
+                        <option value="no" selected>Без друку</option>
                     </select>
                 </div>
             </div>
         </section>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
