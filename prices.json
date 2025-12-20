@@ -1,0 +1,161 @@
+{
+  "punkt82":
+  {
+    "A4": {
+      "1+0": [
+        { "from":  1, "to": 9, "price": 11},
+        { "from":  10, "to": 29, "price": 9.45},
+        { "from":  30, "to": 49, "price": 8.25},
+        { "from":  50, "to": 99, "price": 7.04},
+        { "from":  100, "to": 299, "price": 6.05},
+        { "from":  300, "to": 999, "price": 5.28},
+        { "from":  1000, "to": 2999, "price": 4.73},
+        { "from":  3000, "to": null, "price": 3.74}
+      ],
+      "1+1": [
+        { "from":  1, "to": 9, "price": 17},
+        { "from":  10, "to": 29, "price": 14.62},
+        { "from":  30, "to": 49, "price": 12.75},
+        { "from":  50, "to": 99, "price": 10.88},
+        { "from":  100, "to": 299, "price": 9.35},
+        { "from":  300, "to": 999, "price": 8.16},
+        { "from":  1000, "to": 2999, "price": 7.31},
+        { "from":  3000, "to": null, "price": 5.78}
+      ],
+      "4+0": [
+        { "from":  1, "to": 9, "price": 17},
+        { "from":  10, "to": 29, "price": 14.62},
+        { "from":  30, "to": 49, "price": 12.75},
+        { "from":  50, "to": 99, "price": 10.88},
+        { "from":  100, "to": 299, "price": 9.35},
+        { "from":  300, "to": 999, "price": 8.16},
+        { "from":  1000, "to": 2999, "price": 7.31},
+        { "from":  3000, "to": null, "price": 5.78}
+      ],
+      "4+4": [
+        { "from":  1, "to": 9, "price": 25},
+        { "from":  10, "to": 29, "price": 21.5},
+        { "from":  30, "to": 49, "price": 18.75},
+        { "from":  50, "to": 99, "price": 16},
+        { "from":  100, "to": 299, "price": 13.75},
+        { "from":  300, "to": 999, "price": 12},
+        { "from":  1000, "to": 2999, "price": 10.75},
+        { "from":  3000, "to": null, "price": 8.5}
+      ],
+      "no": {
+        "ofset80": [
+          { "from": 1, "to": 99, "price": 5},
+          { "from": 100, "to": 499, "price": 4.4},
+          { "from": 500, "to": 999, "price": 3.8},
+          { "from": 1000, "to": 2999, "price": 3.2},
+          { "from": 3000, "to": 4999, "price": 2.7},
+          { "from": 5000, "to": 9999, "price": 2.3},
+          { "from": 10000, "to": 19999, "price": 2},
+          { "from": 20000, "to": null, "price": 1.8}
+        ],
+        "ofset160": [
+          { "from": 1, "to": 99, "price": 9},
+          { "from": 100, "to": 499, "price": 8.5},
+          { "from": 500, "to": 999, "price": 7.7},
+          { "from": 1000, "to": 2999, "price": 7},
+          { "from": 3000, "to": 4999, "price": 6.2},
+          { "from": 5000, "to": 9999, "price": 5.5},
+          { "from": 10000, "to": 19999, "price": 5},
+          { "from": 20000, "to": null, "price": 4.5}
+        ],
+        "kreid130": [
+          { "from": 1, "to": 99, "price": 6},
+          { "from": 100, "to": 499, "price": 5},
+          { "from": 500, "to": 999, "price": 4.5},
+          { "from": 1000, "to": 2999, "price": 4},
+          { "from": 3000, "to": 4999, "price": 3.5},
+          { "from": 5000, "to": 9999, "price": 3},
+          { "from": 10000, "to": 19999, "price": 2.5},
+          { "from": 20000, "to": null, "price": 2.2}
+        ]
+      }
+    },
+    "A3": {
+      "1+0": [
+        { "from":  1, "to": 4, "price": 17},
+        { "from":  5, "to": 14, "price": 14.45},
+        { "from":  15, "to": 24, "price": 12.75},
+        { "from":  25, "to": 49, "price": 11.05},
+        { "from":  50, "to": 149, "price": 9.69},
+        { "from":  150, "to": 499, "price": 8.5},
+        { "from":  500, "to": 1499, "price": 7.65},
+        { "from":  1500, "to": null, "price": 6.63}
+      ],
+      "1+1": [
+        { "from":  1, "to": 4, "price": 25},
+        { "from":  5, "to": 14, "price": 21.25},
+        { "from":  15, "to": 24, "price": 18.75},
+        { "from":  25, "to": 49, "price": 16.25},
+        { "from":  50, "to": 149, "price": 14.25},
+        { "from":  150, "to": 499, "price": 12.5},
+        { "from":  500, "to": 1499, "price": 11.25},
+        { "from":  1500, "to": null, "price": 9.75}
+      ],
+      "4+0": [
+        { "from":  1, "to": 4, "price": 28},
+        { "from":  5, "to": 14, "price": 23.18},
+        { "from":  15, "to": 24, "price": 21},
+        { "from":  25, "to": 49, "price": 18.2},
+        { "from":  50, "to": 149, "price": 15.96},
+        { "from":  150, "to": 499, "price": 14},
+        { "from":  500, "to": 1499, "price": 12.6},
+        { "from":  1500, "to": null, "price": 10.92}
+      ],
+      "4+4": [
+        { "from":  1, "to": 4, "price": 38},
+        { "from":  5, "to": 14, "price": 32.3},
+        { "from":  15, "to": 24, "price": 28.5},
+        { "from":  25, "to": 49, "price": 24.7},
+        { "from":  50, "to": 149, "price": 21.66},
+        { "from":  150, "to": 499, "price": 19},
+        { "from":  500, "to": 1499, "price": 17.1},
+        { "from":  1500, "to": null, "price": 14.82}
+      ]
+    },
+    "ofset160": [
+      { "from":  1, "to": 4, "price": 48},
+      { "from":  5, "to": 14, "price": 40.32},
+      { "from":  15, "to": 24, "price": 35.52},
+      { "from":  25, "to": 49, "price": 30.72},
+      { "from":  50, "to": 149, "price": 26.88},
+      { "from":  150, "to": 499, "price": 23.04},
+      { "from":  500, "to": 1499, "price": 19.2},
+      { "from":  1500, "to": null, "price": 15.36}
+    ],
+    "kreid130": [
+      { "from":  1, "to": 4, "price": 36},
+      { "from":  5, "to": 14, "price": 30.23},
+      { "from":  15, "to": 24, "price": 26.63},
+      { "from":  25, "to": 49, "price": 23.03},
+      { "from":  50, "to": 149, "price": 20.15},
+      { "from":  150, "to": 499, "price": 17.28},
+      { "from":  500, "to": 1499, "price": 14.4},
+      { "from":  1500, "to": null, "price": 11.51}
+    ],
+    "drukNaZvoroti": [
+      { "from":  1, "to": 4, "price": 18},
+      { "from":  5, "to": 14, "price": 15.12},
+      { "from":  15, "to": 24, "price": 13.32},
+      { "from":  25, "to": 49, "price": 11.52},
+      { "from":  50, "to": 149, "price": 10.08},
+      { "from":  150, "to": 499, "price": 8.64},
+      { "from":  500, "to": 1499, "price": 7.2},
+      { "from":  1500, "to": null, "price": 4.1}
+    ]
+  },
+  "porizkaVnutr": [
+    { "from":  1, "to": 99, "price": 1},
+    { "from":  100, "to": 499, "price": 0.8},
+    { "from":  500, "to": 999, "price": 0.7},
+    { "from":  1000, "to": 2999, "price": 0.6},
+    { "from":  3000, "to": 4999, "price": 0.5},
+    { "from":  5000, "to": 9999, "price": 0.4},
+    { "from":  10000, "to": 19999, "price": 0.3},
+    { "from":  20000, "to": null, "price": 0.2}
+  ]
+}
