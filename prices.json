@@ -157,5 +157,469 @@
     { "from":  5000, "to": 9999, "price": 0.4},
     { "from":  10000, "to": 19999, "price": 0.3},
     { "from":  20000, "to": null, "price": 0.2}
-  ]
-}
+  ],
+  "pidklobkl": {
+    "kreid130": [
+      { "from":  1, "to": 4, "price": 36},
+      { "from":  5, "to": 14, "price": 30.23},
+      { "from":  15, "to": 24, "price": 26.63},
+      { "from":  25, "to": 49, "price": 23.03},
+      { "from":  50, "to": 149, "price": 20.15},
+      { "from":  150, "to": 499, "price": 17.28},
+      { "from":  500, "to": 1499, "price": 14.4},
+      { "from":  1500, "to": null, "price": 11.51}
+    ],
+    "kreid200": [
+      { "from":  1, "to": 4, "price": 44},
+      { "from":  5, "to": 14, "price": 36.96},
+      { "from":  15, "to": 24, "price": 32.56},
+      { "from":  25, "to": 49, "price": 28.16},
+      { "from":  50, "to": 149, "price": 24.64},
+      { "from":  150, "to": 499, "price": 21.11},
+      { "from":  500, "to": 1499, "price": 17.6},
+      { "from":  1500, "to": null, "price": 14.08}
+    ],
+    "kreid300": [
+      { "from":  1, "to": 4, "price": 44},
+      { "from":  5, "to": 14, "price": 46.36},
+      { "from":  15, "to": 24, "price": 39.96},
+      { "from":  25, "to": 49, "price": 34.56},
+      { "from":  50, "to": 149, "price": 30.24},
+      { "from":  150, "to": 499, "price": 25.91},
+      { "from":  500, "to": 1499, "price": 21.6},
+      { "from":  1500, "to": null, "price": 17.28}
+    ],
+    "ofset160": [
+      { "from":  1, "to": 4, "price": 48},
+      { "from":  5, "to": 14, "price": 40.32},
+      { "from":  15, "to": 24, "price": 35.52},
+      { "from":  25, "to": 49, "price": 30.72},
+      { "from":  50, "to": 149, "price": 26.88},
+      { "from":  150, "to": 499, "price": 23.04},
+      { "from":  500, "to": 1499, "price": 19.2},
+      { "from":  1500, "to": null, "price": 15.36}
+    ],
+    "ofset300": [
+      { "from":  1, "to": 4, "price": 70},
+      { "from":  5, "to": 14, "price": 58.8},
+      { "from":  15, "to": 24, "price": 51.8},
+      { "from":  25, "to": 49, "price": 44.79},
+      { "from":  50, "to": 149, "price": 39.2},
+      { "from":  150, "to": 499, "price": 33.6},
+      { "from":  500, "to": 1499, "price": 28},
+      { "from":  1500, "to": null, "price": 22.4}
+    ],
+    "dalicandido": [
+      { "from":  1, "to": 1, "price":  130},
+      { "from":  2, "to": 4, "price":  110},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  80}
+    ],
+    "dalineve": [
+      { "from":  1, "to": 1, "price":  130},
+      { "from":  2, "to": 4, "price":  110},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  80}
+    ],
+    "stardreamcrystal": [
+      { "from":  1, "to": 1, "price":  140},
+      { "from":  2, "to": 4, "price":  120},
+      { "from":  5, "to": 14, "price":  105},
+      { "from":  15, "to": 24, "price":  95},
+      { "from":  25, "to": null, "price":  90}
+    ],
+    "stardreamdiamond": [
+      { "from":  1, "to": 1, "price":  140},
+      { "from":  2, "to": 4, "price":  120},
+      { "from":  5, "to": 14, "price":  105},
+      { "from":  15, "to": 24, "price":  95},
+      { "from":  25, "to": null, "price":  90}
+    ],
+    "stardreamopal": [
+      { "from":  1, "to": 1, "price":  140},
+      { "from":  2, "to": 4, "price":  120},
+      { "from":  5, "to": 14, "price":  105},
+      { "from":  15, "to": 24, "price":  95},
+      { "from":  25, "to": null, "price":  90}
+    ],
+    "stardreamcitrine": [
+      { "from":  1, "to": 1, "price":  160},
+      { "from":  2, "to": 4, "price":  140},
+      { "from":  5, "to": 14, "price":  125},
+      { "from":  15, "to": 24, "price":  115},
+      { "from":  25, "to": null, "price":  110}
+    ],
+    "floraavorio": [
+      { "from":  1, "to": 1, "price":  140},
+      { "from":  2, "to": 4, "price":  120},
+      { "from":  5, "to": 14, "price":  105},
+      { "from":  15, "to": 24, "price":  95},
+      { "from":  25, "to": null, "price":  90}
+    ],
+    "tintorettogesso": [
+      { "from":  1, "to": 1, "price":  130},
+      { "from":  2, "to": 4, "price":  110},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  80}
+    ],
+    "siriopearlaurum": [
+      { "from":  1, "to": 1, "price":  180},
+      { "from":  2, "to": 4, "price":  160},
+      { "from":  5, "to": 14, "price":  145},
+      { "from":  15, "to": 24, "price":  135},
+      { "from":  25, "to": null, "price":  130}
+    ],
+    "icelite2s": [
+      { "from":  1, "to": 1, "price":  120},
+      { "from":  2, "to": 4, "price":  105},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  75}
+    ],
+    "splendor": [
+      { "from":  1, "to": 1, "price":  120},
+      { "from":  2, "to": 4, "price":  105},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  75}
+    ],
+    "sirio": [
+      { "from":  1, "to": 1, "price":  130},
+      { "from":  2, "to": 4, "price":  110},
+      { "from":  5, "to": 14, "price":  95},
+      { "from":  15, "to": 24, "price":  85},
+      { "from":  25, "to": null, "price":  80}
+    ],
+    "gsk": [
+      { "from":  1, "to": 1, "price":  180},
+      { "from":  2, "to": 4, "price":  160},
+      { "from":  5, "to": 14, "price":  145},
+      { "from":  15, "to": 24, "price":  135},
+      { "from":  25, "to": null, "price":  130}
+    ],
+    "drukNaZvorotiDesigner": [
+        { "from":  1, "to": 1, "price":  35},
+        { "from":  2, "to": 4, "price":  31.8},
+        { "from":  5, "to": 14, "price":  30.22},
+        { "from":  15, "to": 24, "price":  28.63},
+        { "from":  25, "to": null, "price":  27.04}
+      ]
+    },
+    "drukNaZvoroti": [
+      { "from":  1, "to": 4, "price": 18},
+      { "from":  5, "to": 14, "price": 15.12},
+      { "from":  15, "to": 24, "price": 13.32},
+      { "from":  25, "to": 49, "price": 11.52},
+      { "from":  50, "to": 149, "price": 10.08},
+      { "from":  150, "to": 499, "price": 8.64},
+      { "from":  500, "to": 1499, "price": 7.2},
+      { "from":  1500, "to": null, "price": 4.1}
+    ],
+    "porizka": [
+      { "from":  1, "to": 3, "price": 12},
+      { "from":  4, "to": 10, "price": 10},
+      { "from":  11, "to": 25, "price": 8},
+      { "from":  26, "to": 50, "price": 6},
+      { "from":  51, "to": 99, "price": 4},
+      { "from":  100, "to": null, "price": 3}
+    ],
+    "lamination": {
+      "a6glian": [
+        { "from":  1, "to": 2, "price": 60},
+        { "from":  3, "to": 10, "price": 48},
+        { "from":  11, "to": 30, "price": 38},
+        { "from":  31, "to": 50, "price": 30},
+        { "from":  51, "to": 99, "price": 24},
+        { "from":  100, "to": null, "price": 18}
+      ],
+      "a5glian": [
+        { "from":  1, "to": 2, "price": 65},
+        { "from":  3, "to": 10, "price": 53},
+        { "from":  11, "to": 30, "price": 43},
+        { "from":  31, "to": 50, "price": 35},
+        { "from":  51, "to": 99, "price": 29},
+        { "from":  100, "to": null, "price": 24}
+      ],
+      "a4glian": [
+        { "from":  1, "to": 2, "price": 70},
+        { "from":  3, "to": 10, "price": 60},
+        { "from":  11, "to": 30, "price": 50},
+        { "from":  31, "to": 50, "price": 42},
+        { "from":  51, "to": 99, "price": 34},
+        { "from":  100, "to": null, "price": 28}
+      ],
+      "a4mat": [
+        { "from":  1, "to": 2, "price": 85},
+        { "from":  3, "to": 10, "price": 70},
+        { "from":  11, "to": 30, "price": 55},
+        { "from":  31, "to": 50, "price": 48},
+        { "from":  51, "to": 99, "price": 42},
+        { "from":  100, "to": null, "price": 38}
+      ],
+      "a3glian": [
+        { "from":  1, "to": 2, "price": 85},
+        { "from":  3, "to": 10, "price": 70},
+        { "from":  11, "to": 30, "price": 55},
+        { "from":  31, "to": 50, "price": 48},
+        { "from":  51, "to": 99, "price": 42},
+        { "from":  100, "to": null, "price": 38}
+      ],
+      "a3mat": [
+        { "from":  1, "to": 2, "price": 120},
+        { "from":  3, "to": 10, "price": 95},
+        { "from":  11, "to": 30, "price": 75},
+        { "from":  31, "to": 50, "price": 62},
+        { "from":  51, "to": 99, "price": 54},
+        { "from":  100, "to": null, "price": 48}
+      ],
+      "a4soft": [
+        { "from":  1, "to": 2, "price": 120},
+        { "from":  3, "to": 10, "price": 95},
+        { "from":  11, "to": 30, "price": 75},
+        { "from":  31, "to": 50, "price": 62},
+        { "from":  51, "to": 99, "price": 54},
+        { "from":  100, "to": null, "price": 48}
+      ]
+    },
+    "plastikova": {
+      "yes": {
+        "a6": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 45},
+            { "from":  3, "to": 10, "price": 35},
+            { "from":  11, "to": 30, "price": 30},
+            { "from":  31, "to": 50, "price": 25},
+            { "from":  51, "to": 99, "price": 20},
+            { "from":  100, "to": 299, "price": 17},
+            { "from":  300, "to": null, "price": 13}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 50},
+            { "from":  3, "to": 10, "price": 40},
+            { "from":  11, "to": 30, "price": 33},
+            { "from":  31, "to": 50, "price": 28},
+            { "from":  51, "to": 99, "price": 23},
+            { "from":  100, "to": 299, "price": 19},
+            { "from":  300, "to": null, "price": 16}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 65},
+            { "from":  3, "to": 10, "price": 45},
+            { "from":  11, "to": 30, "price": 35},
+            { "from":  31, "to": 50, "price": 30},
+            { "from":  51, "to": 99, "price": 25},
+            { "from":  100, "to": 299, "price": 22},
+            { "from":  300, "to": null, "price": 19}
+          ]
+        },
+        "a5": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 70},
+            { "from":  3, "to": 10, "price": 55},
+            { "from":  11, "to": 30, "price": 45},
+            { "from":  31, "to": 50, "price": 36},
+            { "from":  51, "to": 99, "price": 28},
+            { "from":  100, "to": 299, "price": 22},
+            { "from":  300, "to": null, "price": 18}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 85},
+            { "from":  3, "to": 10, "price": 68},
+            { "from":  11, "to": 30, "price": 52},
+            { "from":  31, "to": 50, "price": 40},
+            { "from":  51, "to": 99, "price": 32},
+            { "from":  100, "to": 299, "price": 26},
+            { "from":  300, "to": null, "price": 22}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 100},
+            { "from":  3, "to": 10, "price": 80},
+            { "from":  11, "to": 30, "price": 60},
+            { "from":  31, "to": 50, "price": 45},
+            { "from":  51, "to": 99, "price": 36},
+            { "from":  100, "to": 299, "price": 28},
+            { "from":  300, "to": null, "price": 24}
+          ]
+        },
+        "a4": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 85},
+            { "from":  3, "to": 10, "price": 70},
+            { "from":  11, "to": 30, "price": 60},
+            { "from":  31, "to": 50, "price": 50},
+            { "from":  51, "to": 99, "price": 40},
+            { "from":  100, "to": 299, "price": 34},
+            { "from":  300, "to": null, "price": 26}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 100},
+            { "from":  3, "to": 10, "price": 80},
+            { "from":  11, "to": 30, "price": 65},
+            { "from":  31, "to": 50, "price": 55},
+            { "from":  51, "to": 99, "price": 45},
+            { "from":  100, "to": 299, "price": 38},
+            { "from":  300, "to": null, "price": 32}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 115},
+            { "from":  3, "to": 10, "price": 90},
+            { "from":  11, "to": 30, "price": 70},
+            { "from":  31, "to": 50, "price": 60},
+            { "from":  51, "to": 99, "price": 50},
+            { "from":  100, "to": 299, "price": 44},
+            { "from":  300, "to": null, "price": 38}
+          ]
+        },
+        "a3": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 115},
+            { "from":  3, "to": 10, "price": 100},
+            { "from":  11, "to": 30, "price": 90},
+            { "from":  31, "to": 50, "price": 80},
+            { "from":  51, "to": 99, "price": 70},
+            { "from":  100, "to": 299, "price": 60},
+            { "from":  300, "to": null, "price": 55}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 130},
+            { "from":  3, "to": 10, "price": 115},
+            { "from":  11, "to": 30, "price": 100},
+            { "from":  31, "to": 50, "price": 90},
+            { "from":  51, "to": 99, "price": 80},
+            { "from":  100, "to": 299, "price": 70},
+            { "from":  300, "to": null, "price": 60}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 145},
+            { "from":  3, "to": 10, "price": 125},
+            { "from":  11, "to": 30, "price": 105},
+            { "from":  31, "to": 50, "price": 95},
+            { "from":  51, "to": 99, "price": 85},
+            { "from":  100, "to": 299, "price": 75},
+            { "from":  300, "to": null, "price": 65}
+          ]
+        }
+      },
+      "no": {
+        "a6": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 40},
+            { "from":  3, "to": 10, "price": 33},
+            { "from":  11, "to": 30, "price": 28},
+            { "from":  31, "to": 50, "price": 23},
+            { "from":  51, "to": 99, "price": 18},
+            { "from":  100, "to": 299, "price": 16},
+            { "from":  300, "to": null, "price": 12}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 45},
+            { "from":  3, "to": 10, "price": 38},
+            { "from":  11, "to": 30, "price": 30},
+            { "from":  31, "to": 50, "price": 26},
+            { "from":  51, "to": 99, "price": 20},
+            { "from":  100, "to": 299, "price": 18},
+            { "from":  300, "to": null, "price": 15}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 55},
+            { "from":  3, "to": 10, "price": 42},
+            { "from":  11, "to": 30, "price": 32},
+            { "from":  31, "to": 50, "price": 28},
+            { "from":  51, "to": 99, "price": 22},
+            { "from":  100, "to": 299, "price": 20},
+            { "from":  300, "to": null, "price": 18}
+          ]
+        },
+        "a5": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 60},
+            { "from":  3, "to": 10, "price": 50},
+            { "from":  11, "to": 30, "price": 42},
+            { "from":  31, "to": 50, "price": 34},
+            { "from":  51, "to": 99, "price": 26},
+            { "from":  100, "to": 299, "price": 20},
+            { "from":  300, "to": null, "price": 16}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 75},
+            { "from":  3, "to": 10, "price": 60},
+            { "from":  11, "to": 30, "price": 48},
+            { "from":  31, "to": 50, "price": 38},
+            { "from":  51, "to": 99, "price": 30},
+            { "from":  100, "to": 299, "price": 24},
+            { "from":  300, "to": null, "price": 20}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 85},
+            { "from":  3, "to": 10, "price": 70},
+            { "from":  11, "to": 30, "price": 55},
+            { "from":  31, "to": 50, "price": 42},
+            { "from":  51, "to": 99, "price": 34},
+            { "from":  100, "to": 299, "price": 26},
+            { "from":  300, "to": null, "price": 22}
+          ]
+        },
+        "a4": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 70},
+            { "from":  3, "to": 10, "price": 60},
+            { "from":  11, "to": 30, "price": 48},
+            { "from":  31, "to": 50, "price": 38},
+            { "from":  51, "to": 99, "price": 30},
+            { "from":  100, "to": 299, "price": 24},
+            { "from":  300, "to": null, "price": 18}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 85},
+            { "from":  3, "to": 10, "price": 70},
+            { "from":  11, "to": 30, "price": 55},
+            { "from":  31, "to": 50, "price": 44},
+            { "from":  51, "to": 99, "price": 36},
+            { "from":  100, "to": 299, "price": 30},
+            { "from":  300, "to": null, "price": 24}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 100},
+            { "from":  3, "to": 10, "price": 80},
+            { "from":  11, "to": 30, "price": 65},
+            { "from":  31, "to": 50, "price": 55},
+            { "from":  51, "to": 99, "price": 43},
+            { "from":  100, "to": 299, "price": 32},
+            { "from":  300, "to": null, "price": 26}
+          ]
+        },
+        "a3": {
+          "do50": [
+            { "from":  1, "to": 2, "price": 100},
+            { "from":  3, "to": 10, "price": 90},
+            { "from":  11, "to": 30, "price": 80},
+            { "from":  31, "to": 50, "price": 70},
+            { "from":  51, "to": 99, "price": 60},
+            { "from":  100, "to": 299, "price": 50},
+            { "from":  300, "to": null, "price": 45}
+          ],
+          "do100": [
+            { "from":  1, "to": 2, "price": 110},
+            { "from":  3, "to": 10, "price": 100},
+            { "from":  11, "to": 30, "price": 90},
+            { "from":  31, "to": 50, "price": 80},
+            { "from":  51, "to": 99, "price": 70},
+            { "from":  100, "to": 299, "price": 60},
+            { "from":  300, "to": null, "price": 50}
+          ],
+          "do150": [
+            { "from":  1, "to": 2, "price": 120},
+            { "from":  3, "to": 10, "price": 110},
+            { "from":  11, "to": 30, "price": 95},
+            { "from":  31, "to": 50, "price": 85},
+            { "from":  51, "to": 99, "price": 75},
+            { "from":  100, "to": 299, "price": 65},
+            { "from":  300, "to": null, "price": 55}
+          ]
+        }
+      }
+    }
+  }

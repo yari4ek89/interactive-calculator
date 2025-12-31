@@ -13,3 +13,120 @@
     pointer-events: none;
     z-index: 9999;
 }
+
+/* ====== Product preview ("Вид готового виробу") ====== */
+.preview-area {
+    position: relative;
+    padding-left: 38px;   /* space for vertical ruler */
+    padding-bottom: 34px; /* space for horizontal ruler */
+}
+
+.preview-area img {
+    display: block;
+}
+
+.ruler {
+    position: absolute;
+    color: #6c757d;
+    font-size: 12px;
+    line-height: 1;
+    user-select: none;
+}
+
+/* Vertical ruler (left) */
+.ruler-y {
+    left: 0;
+    top: 0;
+    bottom: 34px;
+    width: 34px;
+}
+
+.ruler-y::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #adb5bd;
+}
+
+.ruler-y::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 10px,
+            #adb5bd 10px,
+            #adb5bd 11px
+    );
+}
+
+.ruler-y span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Horizontal ruler (bottom) */
+.ruler-x {
+    left: 38px;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+}
+
+.ruler-x::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    height: 1px;
+    background: #adb5bd;
+}
+
+.ruler-x::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    height: 8px;
+    background: repeating-linear-gradient(
+            to right,
+            transparent 0,
+            transparent 10px,
+            #adb5bd 10px,
+            #adb5bd 11px
+    );
+}
+
+.ruler-x span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-weight: 600;
+}
+
+.plastic-badge {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dee2e6;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #212529;
+}
