@@ -60,7 +60,6 @@ function getOrientation() {
 }
 
 function getDisplayDims(meta) {
-  // If horizontal – rotate: width<->height
   const orientation = getOrientation();
   if (orientation === 'horizontal') {
     return { w: meta.h, h: meta.w };
@@ -75,31 +74,27 @@ function isSquare(meta) {
 function resolvePreviewImage() {
   const meta = getSelectedResolutionMeta();
   const square = isSquare(meta);
-  const side = $springSide.val(); // longside | shortside
+  const side = $springSide.val();
   const orientation = getOrientation();
 
-  // Squares: only "side" visually matters
   if (square) {
     return (side === 'shortside')
       ? 'img/preview_square_top.png'
       : 'img/preview_square_left.png';
   }
 
-  // A6–A3 rectangles
   if (orientation === 'horizontal') {
-    // In landscape the long side is top/bottom.
     return (side === 'longside')
       ? 'img/preview_rect_h_long.png'
       : 'img/preview_rect_h_short.png';
   }
-  // vertical
+
   return (side === 'longside')
     ? 'img/preview_rect_v_long.png'
     : 'img/preview_rect_v_short.png';
 }
 
 function updatePreview() {
-  // If preview block is missing (older HTML), don't crash
   if (!$previewImg.length) return;
 
   const meta = getSelectedResolutionMeta();
@@ -110,7 +105,6 @@ function updatePreview() {
 
   $previewImg.attr('src', resolvePreviewImage());
 
-  // Plastic – simple visual badge (no price influence here)
   if ($plasticBadge.length) {
     const hasPlastic = (plastikChoose.val() !== 'no');
     if (hasPlastic) {
@@ -149,14 +143,12 @@ updatePreview();
 // ================== EVENTS ==================
 calculateButton.on('click', calculate);
 
-// Live preview
 $orientVert.on('change', updatePreview);
 $orientHor.on('change', updatePreview);
 $springSide.on('change', updatePreview);
 plastikChoose.on('change', updatePreview);
 
 resolChoose.on('change', function () {
-  // Для A3/297x297 софт-лам недоступна (в ТЗ софт только для меньших форматов)
   const isA3 = (resolChoose.val() === 'A3' || resolChoose.val() === '297x297');
   const pokrOptions = isA3
     ? '<option value="no">Без покриття</option>\n<option value="gl">ГЛ 1+1 100 мікрон</option>\n<option value="mat">МАТ 1+1 100 мікрон</option>'
@@ -227,7 +219,6 @@ function selectedText($el) {
 }
 
 function escapeHtml(str) {
-  // Экранит спецсимволы, чтобы выбранные значения безопасно выводились в HTML (и не ломали верстку).
   if (str === null || str === undefined) return '';
   return String(str)
     .replace(/&/g, '&amp;')
@@ -271,7 +262,6 @@ function getSelectedSize() {
 
 
 function isA4FamilySize(sizeValue) {
-  // За ТЗ: до A4 відносяться також 200x200 та 297x297 (для них порізка НЕ застосовується)
   return sizeValue === 'A4' || sizeValue === '200x200' || sizeValue === '297x297';
 }
 
@@ -284,7 +274,6 @@ function getPiecesPerA4(sizeValue, width, height) {
 
 
 function normalizeResolution(val) {
-  // Приводимо до ключів a6/a5/a4/a3
   switch (val) {
     case '100x100':
     case 'A6':
@@ -304,7 +293,6 @@ function normalizeResolution(val) {
 }
 
 function mapCoverMaterialKey(v) {
-  // HTML використовує kr130/kr200/kr300, а в prices.json ключі kreid130/kreid200/kreid300
   if (v === 'kr130') return 'kreid130';
   if (v === 'kr200') return 'kreid200';
   if (v === 'kr300') return 'kreid300';
@@ -320,7 +308,6 @@ function pickRangePrice(ranges, qty) {
 
 // ================== UI генерація сторінок/аркушів ==================
 function automateVnutr(maxPages = 240) {
-  // maxPages — це максимум СТОРІНОК. В селекті value зберігаємо кількість АРКУШІВ.
   vnutrVibor.empty();
   for (let pages = 2; pages <= maxPages; pages += 2) {
     const sheets = pages / 2;
@@ -404,7 +391,7 @@ function calculate() {
 function punkt82() {
   const { width, height } = getSelectedSize();
 
-  const sheetsPerNotebook = toInt(vnutrVibor.val(), 0); // аркуші
+  const sheetsPerNotebook = toInt(vnutrVibor.val(), 0);
   const qty = Math.max(1, toInt(complects.val(), 1));
   const totalSheets = sheetsPerNotebook * qty;
 
@@ -413,7 +400,7 @@ function punkt82() {
   const a4SheetsToPrint = Math.ceil(totalSheets / piecesPerA4);
   const applyCutting = !isA4FamilySize(sizeValue);
 
-  const a3SheetsToPrintAsPieces = totalSheets; // як у твоїй логіці
+  const a3SheetsToPrintAsPieces = totalSheets;
 
   // Друк на офсеті 80 (може бути 1+0/1+1)
   if ((vnutrDruk.val() === '1+0' || vnutrDruk.val() === '1+1') && vnutrMat.val() === 'ofset80') {
@@ -453,51 +440,104 @@ function calcCoverAndBacking(baseQty) {
 
   if (!coverEnabled && !backingEnabled) return 0;
 
-  const coverCfg = {
-    enabled: coverEnabled,
+  const { width, height, value } = getSelectedSize();
+  const perSheetRaw = getPorizka(width, height, 297, 420, 1);
+  const perSheet = Math.max(1, toInt(perSheetRaw, 1));
+  const isA4 = (width === 210 && height === 297) || (width === 297 && height === 210);
+  const needsCutting = (perSheet > 1) && !isA4;
+
+  const coverCfg = coverEnabled ? {
     material: mapCoverMaterialKey(obkladinkaMaterial.val()),
     pokr: obkladinkaPokr.val(),
     druk: obkladinkaDruk.val(),
-  };
+    pieces: Math.max(0, toInt(baseQty, 0)),
+  } : null;
 
-  const backingCfg = {
-    enabled: backingEnabled,
+  const backingCfg = backingEnabled ? {
     material: mapCoverMaterialKey(pidkladkaMaterial.val()),
     pokr: pidkladkaPokr.val(),
     druk: pidkladkaDruk.val(),
-  };
+    pieces: Math.max(0, toInt(baseQty, 0)),
+  } : null;
 
-  // Якщо обкладинка і підкладка однакові по матеріалу/ламінації/друку — сумуємо кількість (вимога ТЗ)
-  const canMerge = coverCfg.enabled && backingCfg.enabled &&
-    coverCfg.material === backingCfg.material &&
-    coverCfg.pokr === backingCfg.pokr &&
-    coverCfg.druk === backingCfg.druk;
+  const parts = [];
+  if (coverCfg) parts.push(coverCfg);
+  if (backingCfg) parts.push(backingCfg);
+  if (!parts.length) return 0;
 
-  if (canMerge) {
-    return calcOneCoverOrBacking(coverCfg, baseQty * 2);
+  const stdReverse = new Set(['kreid130', 'kreid200', 'kreid300', 'ofset160', 'ofset300']);
+
+  const byMaterial = {};
+  for (const p of parts) {
+    const key = p.material || '';
+    if (!key) continue;
+    if (!byMaterial[key]) byMaterial[key] = { piecesTotal: 0, piecesReverse: 0 };
+    byMaterial[key].piecesTotal += toInt(p.pieces, 0);
+    if (p.druk === '4+4') byMaterial[key].piecesReverse += toInt(p.pieces, 0);
   }
 
-  let sum = 0;
-  if (coverCfg.enabled) sum += calcOneCoverOrBacking(coverCfg, baseQty);
-  if (backingCfg.enabled) sum += calcOneCoverOrBacking(backingCfg, baseQty);
-  return sum;
+  let printCost = 0;
+  let totalSheetsAll = 0;
+
+  for (const [mat, g] of Object.entries(byMaterial)) {
+    const piecesTotal = toInt(g.piecesTotal, 0);
+    const piecesReverse = toInt(g.piecesReverse, 0);
+
+    const sheetsEq = piecesTotal / perSheet;
+    const sheetsTotal = Math.ceil(sheetsEq);
+
+    const revEq = piecesReverse / perSheet;
+    const sheetsReverse = Math.ceil(revEq);
+
+    totalSheetsAll += sheetsTotal;
+
+    const baseRanges = PRICES?.pidklobkl?.[mat];
+    const baseUnit = pickRangePrice(baseRanges, sheetsTotal);
+    printCost += baseUnit * sheetsEq;
+
+    if (piecesReverse > 0) {
+      const zRanges = stdReverse.has(mat) ? PRICES?.drukNaZvoroti : PRICES?.pidklobkl?.drukNaZvorotiDesigner;
+      const zUnit = pickRangePrice(zRanges, sheetsReverse);
+      printCost += zUnit * revEq;
+    }
+  }
+
+  let cutCost = 0;
+  if (needsCutting && totalSheetsAll > 0) {
+    const cutUnit = pickRangePrice(PRICES?.porizka, totalSheetsAll);
+    cutCost = cutUnit * totalSheetsAll;
+  }
+
+  const resKey = normalizeResolution(value);
+  const lamByType = {};
+  for (const p of parts) {
+    const k = p.pokr || 'no';
+    if (!lamByType[k]) lamByType[k] = 0;
+    lamByType[k] += toInt(p.pieces, 0);
+  }
+
+  let lamCost = 0;
+  for (const [k, q] of Object.entries(lamByType)) {
+    lamCost += getLaminationPrice(k, q, resKey);
+  }
+
+  return toNum(printCost, 0) + toNum(cutCost, 0) + toNum(lamCost, 0);
 }
+
 
 function calcOneCoverOrBacking(cfg, qtyPieces) {
   const { width, height, value } = getSelectedSize();
 
   const qty = Math.max(1, toInt(qtyPieces, 1));
 
-  // 1) Друк (прайс на аркуш 297*420, але діапазон обираємо за кількістю виробів)
   let printCost = 0;
   if (cfg.druk === '4+0' || cfg.druk === '4+4') {
-    const perSheet = getPorizka(width, height, 297, 420, 1); // скільки виробів вміщається на A3
+    const perSheet = getPorizka(width, height, 297, 420, 1);
     const a3Sheets = Math.ceil(qty / perSheet);
     const sheetPrice = getPidklObklPrice(cfg.material, cfg.druk, qty);
     printCost = getNoProportionalVOPrice(sheetPrice, width, height, a3Sheets);
   }
 
-  // 2) Ламінація
   const lamCost = getLaminationPrice(cfg.pokr, qty, normalizeResolution(value));
 
   return toNum(printCost, 0) + toNum(lamCost, 0);
@@ -506,7 +546,6 @@ function calcOneCoverOrBacking(cfg, qtyPieces) {
 function getLaminationPrice(pokr, qty, resKey) {
   if (!pokr || pokr === 'no') return 0;
 
-  // Софт для A3 не підтримуємо
   if (pokr === 'soft' && resKey === 'a3') return 0;
 
   let tableKey = null;
@@ -538,7 +577,6 @@ function getLaminationPrice(pokr, qty, resKey) {
 function punkt5(qty) {
   const resKey = normalizeResolution(resolChoose.val());
 
-  // Межі беремо по КІЛЬКОСТІ СТОРІНОК, а не аркушів
   const pages = toInt(vnutrVibor.val(), 0) * 2;
   let mezhi = 'do150';
   if (pages <= 50) mezhi = 'do50';
@@ -554,11 +592,7 @@ function checkPunkt5(format = 'no', resolution, mezhi, qty) {
   return unit * qty;
 }
 
-// ================== НИЖЧЕ — твої базові функції (майже без змін) ==================
 function getProportionalPrice(unitPrice, a4Arkush, applyCutting = true) {
-  // unitPrice — ціна за 1 аркуш A4 (з таблиці)
-  // a4Arkush — скільки аркушів A4 піде на друк
-  // applyCutting — чи додаємо порізку (для A4-family та A3-family не додаємо)
   const base = toNum(unitPrice, 0) * toInt(a4Arkush, 0);
   if (!applyCutting) return base;
   return base + getPorizkaVnutrPrice(a4Arkush);
@@ -598,7 +632,7 @@ function getPorizka(width, height, widthOriginal = 210, heightOriginal = 297, re
 
   if (returns === 0) return getPorizkaVnutrPrice(qty);
   if (returns === 2) return getPorizkaVnutrPrice(qty * perSheet);
-  if (returns === 3) return getPorizkaObklPidklPrice(qty * perSheet);
+  if (returns === 3) return getPorizkaObklPidklPrice(qty);
   return perSheet;
 }
 
@@ -624,7 +658,7 @@ function getPidklObklPrice(format, printType, qty) {
 
   let rangesZvorot;
   if (format === 'kreid130' || format === 'kreid200' || format === 'kreid300' || format === 'ofset160' || format === 'ofset300') {
-    rangesZvorot = PRICES?.pidklobkl?.drukNaZvoroti;
+    rangesZvorot = PRICES?.drukNaZvoroti;
   } else {
     rangesZvorot = PRICES?.pidklobkl?.drukNaZvorotiDesigner;
   }
@@ -648,7 +682,7 @@ function getPorizkaVnutrPrice(qty) {
 }
 
 function getPorizkaObklPidklPrice(qty) {
-  const ranges = PRICES?.pidklobkl?.porizka;
+  const ranges = PRICES?.porizka;
   const unit = pickRangePrice(ranges, qty);
   return unit * toInt(qty, 0);
 }
